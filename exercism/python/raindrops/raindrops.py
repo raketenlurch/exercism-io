@@ -1,16 +1,16 @@
-"""def convert(number):
-    string_list = []
-    if number % 3 == 0:
-        string_list.append('Pling')
-    elif number % 5 == 0:
-        string_list.append('Plang')
-    elif number % 7 == 0:
-        string_list.append('Plong')
-    else:
-        string_list.append(number)
-    string = ''.join(string_list)
-    return string"""
-
 def convert(number):
-    string_list = []
+    result = ""
 
+    if number % 3 == 0:
+        result += "Pling"
+
+    if number % 5 == 0:
+        result += "Plang"
+
+    if number % 7 == 0:
+        result += "Plong"
+
+    if number % 7 != 0 and number % 5 != 0 and number % 3 != 0:
+        result += str(number)
+
+    return result
